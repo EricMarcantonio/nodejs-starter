@@ -17,6 +17,7 @@ const PORT = 8000
  */
 app.get("/", function(req, res) {
     //`res` is an object with methods. The `json` method allows us to send information back to users in the form of json
+    res.setHeader("Access-Control-Allow-Origin", "*") //don't worry about this, just a security thing to allow us to test without problems. If you are curious; CORS is the term to look up.
     res.json({
         ping: "pong"
     })
